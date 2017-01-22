@@ -1,7 +1,6 @@
 
 def challenge1(params):
-  if params is None:
-    return "challenge 1 goes here"
+  return "challenge 1 goes here"
 def challenge2(params):
   if params is None:
     return "challenge 2 goes here"

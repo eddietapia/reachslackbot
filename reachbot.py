@@ -30,7 +30,7 @@ def handle_command(command, channel):
                "* command with numbers, delimited by spaces."
      
     #Split user params into an array 
-    params = command.split()
+    params = command.split(' ')
     
     if command.startswith(HELP_COMMAND):
       response = "This bot will be used to tell you the upcoming " + \
@@ -38,26 +38,26 @@ def handle_command(command, channel):
                   "@reachbot challenge [number]' to find out more info." + \
                   "\nEx: '@reachbot challenge 1' \n - Your friends at REACh"
     elif command.startswith(CHALLENGE1_COMMAND):
-      if len(params) >= 3:
-        response = challenge1(params[2])
+      if (len(params) >= 3):
+        response = challenge1(params[2:])
       else:
-        repsonse = challenge1(None)
+        response = challenge1(None)
     elif command.startswith(CHALLENGE2_COMMAND):
-      if len(params) >= 3:
+      if (len(params) >= 3):
         response = challenge2(params[2:])
       else:
-        repsonse = challenge2(None)
+        response = challenge2(None)
  
     elif command.startswith(CHALLENGE3_COMMAND):
-      if len(params) >= 3:
+      if (len(params) >= 3):
         response = challenge3(params[2:])
       else:
-        repsonse = challenge3(None)
+        response = challenge3(None)
     elif command.startswith(CHALLENGE4_COMMAND):
-      if len(params) >= 3:
+      if (len(params) >= 3):
         response = challenge4(params[2:])
       else:
-        repsonse = challenge4(None)
+        response = challenge4(None)
 
 
     if command.startswith(EXAMPLE_COMMAND):
