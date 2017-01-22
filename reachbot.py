@@ -26,7 +26,7 @@ def handle_command(command, channel):
     
     if command.startswith(HELP_COMMAND):
       response = "This bot will be used to tell you the upcoming " + \
-                  "challenges that each team has to complete. Type '" + \
+                  "challenges that each team has to complete.\nType '" + \
                   "@reachbot challenge [number]' to find out more info." + \
                   "\nEx: '@reachbot challenge 1' \n - Your friends at REACh"
     if command.startswith(EXAMPLE_COMMAND):
