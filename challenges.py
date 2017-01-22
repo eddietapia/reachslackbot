@@ -14,17 +14,17 @@ def challenge0(params):
 
                 {
 
-                        "fallback": "Task assigned after Challenge 1 is complete.",
+                        "fallback": "Task assigned after Challenge 0 is complete.",
 
                         "color": "#3652a6",
 
-                        "pretext": "REACh 2017 Challenge 1 Completed",
+                        "pretext": "REACh 2017 Challenge 0 Completed",
 
-                        "title": "Link to Challenge",
+                        "title": "Congrats Gif",
 
-                        "title_link": "https://drive.google.com/open?id=0B9U4IYtGjEsVaktPSm1FRU82Wkk",
+                        "title_link": "http://gph.is/2ewaKoM",
 
-                        "text": "This challenge is due at 8:45pm",
+                        "text": "Congrats on finishing the example challenge",
 
                         "footer": "REACh",
 
@@ -32,7 +32,29 @@ def challenge0(params):
 
                 }
 
-           ] 
+           ]
+  return [
+
+          {
+
+                  "fallback": "Task assigned after Challenge 1 is complete.",
+
+                  "color": "#ff0000",
+
+                  "pretext": "Wrong Answer!",
+
+                  "title": "Wrong Gif",
+
+                  "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
+
+                  "footer": "REACh",
+
+                  "footer_icon": CHALLENGE_IMAGE_URL
+
+          }
+
+     ]
+
 def challenge1(params):
   if params is None:
     return "challenge 1 goes here"
