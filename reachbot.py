@@ -9,6 +9,7 @@ BOT_ID = os.environ.get("BOT_ID")
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "do"
+HELP_COMMAND = "help"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -22,6 +23,12 @@ def handle_command(command, channel):
     """
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
                "* command with numbers, delimited by spaces."
+    
+    if command.startswith(HELP_COMMAND):
+      response = "This bot will be used to tell you the upcoming
+                  challenges that each team has to complete. Type '
+                  @reachbot challenge [number]' to find out more info.
+                  Ex: '@reachbot challenge 1' \n - Your friends at REACh"
     if command.startswith(EXAMPLE_COMMAND):
         response = "Sure...write some more code then I can do that!"
     slack_client.api_call("chat.postMessage", channel=channel,
