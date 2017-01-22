@@ -25,10 +25,10 @@ def handle_command(command, channel):
                "* command with numbers, delimited by spaces."
     
     if command.startswith(HELP_COMMAND):
-      response = "This bot will be used to tell you the upcoming" + \
+      response = "This bot will be used to tell you the upcoming " + \
                   "challenges that each team has to complete. Type '" + \
                   "@reachbot challenge [number]' to find out more info." + \
-                  "Ex: '@reachbot challenge 1' \n - Your friends at REACh"
+                  "\nEx: '@reachbot challenge 1' \n - Your friends at REACh"
     if command.startswith(EXAMPLE_COMMAND):
         response = "Sure...write some more code then I can do that!"
     slack_client.api_call("chat.postMessage", channel=channel,
