@@ -1,6 +1,6 @@
 import os
 import time
-from challenges import challenge1,challenge2,challenge3,challenge4
+from challenges import challenge0,challenge1,challenge2,challenge3,challenge4
 from slackclient import SlackClient
 
 
@@ -11,11 +11,11 @@ BOT_ID = os.environ.get("BOT_ID")
 AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "do"
 HELP_COMMAND = "help"
+CHALLENGE0_COMMAND = "challenge 0"
 CHALLENGE1_COMMAND = "challenge 1"
 CHALLENGE2_COMMAND = "challenge 2"
 CHALLENGE3_COMMAND = "challenge 3"
 CHALLENGE4_COMMAND = "challenge 4"
-
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
@@ -26,9 +26,10 @@ def handle_command(command, channel):
         are valid commands. If so, then acts on the commands. If not,
         returns back what it needs for clarification.
     """
-    response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
-               "* command with numbers, delimited by spaces."
-     
+    response = "Hi! Welcome to REACh 2017!\n" + \
+               "Please type '@reachbot help' for more info.\n" + \
+               "Happy Hacking - your friends at REACh"
+    array_response = [] 
     #Split user params into an array 
     params = command.split(' ')
     
@@ -37,33 +38,43 @@ def handle_command(command, channel):
                   "challenges that each team has to complete.\nType '" + \
                   "@reachbot challenge [number]' to find out more info." + \
                   "\nEx: '@reachbot challenge 1' \n - Your friends at REACh"
+    elif command.startswith(CHALLENGE0_COMMAND):
+      if (len(params) >= 3):
+        array_response = challenge0(params[2:])
+      else:
+        response = challenge0(None)
     elif command.startswith(CHALLENGE1_COMMAND):
       if (len(params) >= 3):
-        response = challenge1(params[2:])
+        array_response = challenge1(params[2:])
       else:
         response = challenge1(None)
     elif command.startswith(CHALLENGE2_COMMAND):
       if (len(params) >= 3):
-        response = challenge2(params[2:])
+        array_response = challenge2(params[2:])
       else:
         response = challenge2(None)
  
     elif command.startswith(CHALLENGE3_COMMAND):
       if (len(params) >= 3):
-        response = challenge3(params[2:])
+        array_response = challenge3(params[2:])
       else:
         response = challenge3(None)
     elif command.startswith(CHALLENGE4_COMMAND):
       if (len(params) >= 3):
-        response = challenge4(params[2:])
+        array_response = challenge4(params[2:])
       else:
         response = challenge4(None)
 
 
     if command.startswith(EXAMPLE_COMMAND):
         response = "Sure...write some more code then I can do that!"
-    slack_client.api_call("chat.postMessage", channel=channel,
+    if len(array_response) is 0:
+      slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
+    else:
+      slack_client.api_call("chat.postMessage", channel=channel,
+                          attachments=array_response, as_user=True)
+      
 
 
 def parse_slack_output(slack_rtm_output):
