@@ -141,7 +141,7 @@ def challenge1(params):
 
                         "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
 
-                        "text":  "This is supposed to be the easiest puzzle you know...",
+                        "text":  "This is supposed to be the easiest puzzle you know..." + type(user_answer),
 
                         "footer": "REACh",
 
