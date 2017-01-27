@@ -15,7 +15,7 @@ PUZZLE_1_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVcU1pZEJsTGlMMzQ"
 PUZZLE_2_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVOWtVUTZCNmdGQ3c"
 PUZZLE_3_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVY1lxTWlzeENVb00"
 PUZZLE_4_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVV2ZLcWdJd2UzSE0"
-
+CHALLENGE1_TEXT = "In order to unlock challenge 1, you need to solve a puzzle first...\nPlease tell the reachbot the answer to unlock the first challenge.\nEx: '@reachbot challenge 1 <answer>'"
 def challenge0(params):
   if params is None:
     response = "In order to unlock challenge 0, you need to solve a puzzle first:" + \
@@ -59,13 +59,11 @@ def challenge1(params):
               "pretext": "REACh 2017 Challenge 1 Task Completed",
               "title": "Link to Puzzle 1",
               "title_link": PUZZLE_1_URL,
-              "text": "In order to unlock challenge 1, you need to solve a puzzle first..." + \
-                "\nPlease tell the reachbot the answer to unlock the first challenge." + \
-                "\nEx: '@reachbot challenge 1 <answer>'",
+              "text": CHALLENGE1_TEXT,
               "footer": "REACh",
               "footer_icon": CHALLENGE_IMAGE_URL
             }
-            ] 
+          ] 
     #response = "In order to unlock challenge 1, you need to solve a puzzle first:" + \
            #"\nPuzzle 1: " + "\nWhat is brown and sticky?" + \
             #"\nPlease tell the reachbot the answer to unlock the first challenge." + \
