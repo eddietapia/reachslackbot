@@ -53,18 +53,18 @@ def handle_command(command, channel):
       if (len(params) >= 3):
         array_response = challenge2(params[2:])
       else:
-        response = challenge2(None)
+        array_response = challenge2(None)
  
     elif command.startswith(CHALLENGE3_COMMAND):
       if (len(params) >= 3):
         array_response = challenge3(params[2:])
       else:
-        response = challenge3(None)
+        array_response = challenge3(None)
     elif command.startswith(CHALLENGE4_COMMAND):
       if (len(params) >= 3):
         array_response = challenge4(params[2:])
       else:
-        response = challenge4(None)
+        array_response = challenge4(None)
 
 
     if command.startswith(EXAMPLE_COMMAND):
