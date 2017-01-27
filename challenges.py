@@ -100,7 +100,10 @@ def challenge1(params):
                 }
 
            ]
-  user_answer = str(''.join(params))
+  if params > 1:
+    user_answer = '0'
+  else:
+    user_answer = str(params[0])
   # Check if user inputted correct answer 
   if "941" == user_answer:
         return  [
@@ -176,10 +179,10 @@ def challenge2(params):
                 }
 
            ]
-  print type(params)
-  user_answer = str(''.join(params))
+  if type(params) is str:
+        user_answer = str(''.join(params))
   # Check if user inputted correct answer 
-  if "T" == user_answer:
+  if type(params) is str and "T" == user_answer:
         return  [
 
                 {
@@ -246,10 +249,10 @@ def challenge3(params):
                 }
 
            ] 
-  print type(params)
-  user_answer = str(''.join(params))
+  if type(params) is str:
+        user_answer = str(''.join(params))
   # Check if user inputted correct answer 
-  if "5" == user_answer:
+  if type(params) is int and 5 == user_answer:
     return [
 
                 {
@@ -322,11 +325,10 @@ def challenge4(params):
                 }
 
            ]    
- 
-  print type(params)
-  user_answer = str(''.join(params))
+  if type(params) is str:
+        user_answer = str(''.join(params))
   # Check if user inputted correct answer 
-  if "2016" == user_answer:
+  if type(params) is int and 2016 == user_answer:
     return  [
 
                 {
