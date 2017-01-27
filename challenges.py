@@ -100,11 +100,8 @@ def challenge1(params):
                 }
 
            ]
-  testvalue = params
-  if params > 1:
-    user_answer = '0'
-  else:
-    user_answer = str(params[0])
+
+  user_answer = params[0]  
   # Check if user inputted correct answer 
   if "941" == user_answer:
         return  [
@@ -140,7 +137,7 @@ def challenge1(params):
 
                         "pretext": "Wrong Answer!",
 
-                        "title": "Wrong Answer! Your answer: " + user_answer + "original params:"+ testvalue,
+                        "title": "Wrong Answer! Your answer: " + user_answer,
 
                         "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
 
