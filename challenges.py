@@ -103,7 +103,7 @@ def challenge1(params):
 
   user_answer = params[0]  
   # Check if user inputted correct answer 
-  if "941" == user_answer:
+  if type(user_answer) is str and "941" == user_answer:
         return  [
 
                 {
@@ -118,7 +118,7 @@ def challenge1(params):
 
                         "title_link": CHALLENGE1_URL,
 
-                        "text": "This challenge is due at 8:45pm",
+                        "text": "Congrats you got it!\n This challenge is due at 8:45pm",
 
                         "footer": "REACh",
 
@@ -133,11 +133,11 @@ def challenge1(params):
 
                         "fallback": "Oops!",
 
-                        "color": "#3652a6",
+                        "color": "#ff0000",
 
                         "pretext": "Wrong Answer!",
 
-                        "title": "Wrong Answer! Your answer: " + user_answer,
+                        "title": "Wrong Answer!,
 
                         "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
 
@@ -177,10 +177,9 @@ def challenge2(params):
                 }
 
            ]
-  if type(params) is str:
-        user_answer = str(''.join(params))
+  user_answer = params[0]
   # Check if user inputted correct answer 
-  if type(params) is str and "T" == user_answer:
+  if type(user_answer) is str and "T" == user_answer:
         return  [
 
                 {
@@ -195,7 +194,7 @@ def challenge2(params):
 
                         "title_link": CHALLENGE2_URL,
 
-                        "text": "This challenge is due at 6am",
+                        "text": "Congrats on finishing puzzle 2!\nThis challenge is due at 6am",
 
                         "footer": "REACh",
 
@@ -247,10 +246,9 @@ def challenge3(params):
                 }
 
            ] 
-  if type(params) is str:
-        user_answer = str(''.join(params))
+  user_answer = params[0]
   # Check if user inputted correct answer 
-  if type(params) is int and 5 == user_answer:
+  if type(user_answer) is str and "5" == user_answer:
     return [
 
                 {
@@ -265,7 +263,7 @@ def challenge3(params):
 
                         "title_link": CHALLENGE3_URL,
 
-                        "text": "This challenge is due at 10am",
+                        "text": "Congrats on finishing puzzle 3!\nThis challenge is due at 10am",
 
                         "footer": "REACh",
 
@@ -323,10 +321,9 @@ def challenge4(params):
                 }
 
            ]    
-  if type(params) is str:
-        user_answer = str(''.join(params))
+  user_answer = params[0]
   # Check if user inputted correct answer 
-  if type(params) is int and 2016 == user_answer:
+  if type(user_answer) is str and "2016" == user_answer:
     return  [
 
                 {
@@ -341,7 +338,7 @@ def challenge4(params):
 
                         "title_link": CHALLENGE4_URL,
 
-                        "text": "This challenge is due at 6pm",
+                        "text": "Congrats on finishing puzzle 4!\nThis challenge is due at 6pm",
 
                         "footer": "REACh",
 
