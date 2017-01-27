@@ -27,20 +27,29 @@ def challenge0(params):
   print type(params)
   user_answer = str(''.join(params))
   if "stick" in user_answer.lower():
-      return  {
-                "attachments": [
-                  {
-                  "fallback": "Task assigned after Challenge 0 is complete.",
-                  "color": "#3652a6",
-                  "pretext": "REACh 2017 Challenge 0 Completed",
-                  "title": "Link to Challenge 0",
-                  "title_link": "http://gph.is/2ewaKoM",
-                  "text": "Congrats on finishing the example challenge!!!",
-                  "footer": "REACh",
-                  "footer_icon": CHALLENGE_IMAGE_URL
-                  }
-                ]
-              }
+      return  [
+
+                {
+
+                        "fallback": "Task assigned after Challenge 0 is complete.",
+
+                        "color": "#3652a6",
+
+                        "pretext": "REACh 2017 Challenge 0 Completed",
+
+                        "title": "Congrats Gif",
+
+                        "title_link": "http://gph.is/2ewaKoM",
+
+                        "text": "Congrats on finishing the example challenge",
+
+                        "footer": "REACh",
+
+                        "footer_icon": CHALLENGE_IMAGE_URL
+
+                }
+
+           ]
   return  {
             "attachments": [
               {
