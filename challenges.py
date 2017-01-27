@@ -101,9 +101,9 @@ def challenge1(params):
 
            ]
 
-  user_answer = params[0]  
+  user_answer = str(params[0])  
   # Check if user inputted correct answer 
-  if type(user_answer) is str and "941" == user_answer:
+  if "941" == user_answer:
         return  [
 
                 {
@@ -141,7 +141,7 @@ def challenge1(params):
 
                         "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
 
-                        "text":  "This is supposed to be the easiest puzzle you know..." + type(user_answer),
+                        "text":  "This is supposed to be the easiest puzzle you know...",
 
                         "footer": "REACh",
 
@@ -179,7 +179,7 @@ def challenge2(params):
            ]
   user_answer = params[0]
   # Check if user inputted correct answer 
-  if type(user_answer) is str and "T" == user_answer:
+  if "T" == user_answer:
         return  [
 
                 {
@@ -248,7 +248,7 @@ def challenge3(params):
            ] 
   user_answer = params[0]
   # Check if user inputted correct answer 
-  if type(user_answer) is str and "5" == user_answer:
+  if "5" == user_answer:
     return [
 
                 {
@@ -321,9 +321,9 @@ def challenge4(params):
                 }
 
            ]    
-  user_answer = params[0]
+  user_answer = str(params[0])
   # Check if user inputted correct answer 
-  if type(user_answer) is str and "2016" == user_answer:
+  if "2016" == user_answer:
     return  [
 
                 {
