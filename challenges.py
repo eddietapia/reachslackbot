@@ -103,7 +103,7 @@ def challenge1(params):
 
   user_answer = str(params[0])  
   # Check if user inputted correct answer 
-  if "941" == user_answer:
+  if len(params) == 1 and "941" == user_answer:
         return  [
 
                 {
@@ -179,7 +179,7 @@ def challenge2(params):
            ]
   user_answer = params[0]
   # Check if user inputted correct answer 
-  if "T" == user_answer:
+  if len(params) == 1 and "T" == user_answer:
         return  [
 
                 {
@@ -248,7 +248,7 @@ def challenge3(params):
            ] 
   user_answer = params[0]
   # Check if user inputted correct answer 
-  if "5" == user_answer:
+  if len(params) == 1 and "5" == user_answer:
     return [
 
                 {
@@ -323,7 +323,7 @@ def challenge4(params):
            ]    
   user_answer = str(params[0])
   # Check if user inputted correct answer 
-  if "2016" == user_answer:
+  if len(params) == 1 and "2016" == user_answer:
     return  [
 
                 {
