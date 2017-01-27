@@ -167,7 +167,7 @@ def challenge2(params):
 
                         "text": "In order to unlock challenge 2, you need to solve a puzzle first..." + \
                         "\nPlease tell the reachbot the answer to unlock the second challenge." + \
-                        "\nEx: '@reachbot challenge 2 <answer>',
+                        "\nEx: '@reachbot challenge 2 <answer>'",
 
                         "footer": "REACh",
 
@@ -250,7 +250,7 @@ def challenge3(params):
   user_answer = str(''.join(params))
   # Check if user inputted correct answer 
   if "5" == user_answer:
-        return [
+    return [
 
                 {
 
@@ -294,7 +294,6 @@ def challenge3(params):
                 }
 
            ]
-
            
 def challenge4(params):
   if params is None:
@@ -323,28 +322,12 @@ def challenge4(params):
                 }
 
            ]    
-
-    return  {
-              "attachments": [
-                {
-                  "fallback": "Task assigned after Challenge 4 is complete.",
-                  "color": "#3652a6",
-                  "pretext": "REACh 2017 Challenge 4 Task Completed",
-                  "title": "Link to Puzzle 4",
-                  "title_link": PUZZLE_4_URL,
-                  "text": "In order to unlock challenge 4, you need to solve a puzzle first..." + \
-                    "\nPlease tell the reachbot the answer to unlock the first challenge." + \
-                    "\nEx: '@reachbot challenge 4 <answer>'",
-                  "footer": "REACh",
-                  "footer_icon": CHALLENGE_IMAGE_URL
-                }
-              ]
-            }  
+ 
   print type(params)
   user_answer = str(''.join(params))
   # Check if user inputted correct answer 
   if "2016" == user_answer:
-      return [
+    return  [
 
                 {
 
@@ -367,7 +350,7 @@ def challenge4(params):
                 }
 
            ]        
-    return [
+  return  [
 
                 {
 
