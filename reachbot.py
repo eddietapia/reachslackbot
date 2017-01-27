@@ -22,15 +22,16 @@ slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
 def handle_command(command, channel):
     """
-        Receives commands directed at the bot and determines if they
-        are valid commands. If so, then acts on the commands. If not,
-        returns back what it needs for clarification.
+    Receives commands directed at the bot and determines if they
+    are valid commands. If so, then acts on the commands. If not,
+    returns back what it needs for clarification.
     """
     response = "Hi! Welcome to REACh 2017!\n" + \
                "Please type '@reachbot help' for more info.\n" + \
-               "Happy Hacking - your friends at REACh"
+               "Happy Hacking\n" + \
+               "- Your friends at REACh"
     array_response = [] 
-    #Split user params into an array 
+    # Split user params into an array 
     params = command.split(' ')
     
     if command.startswith(HELP_COMMAND):
