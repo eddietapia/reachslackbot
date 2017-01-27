@@ -100,6 +100,7 @@ def challenge1(params):
                 }
 
            ]
+  testvalue = params
   if params > 1:
     user_answer = '0'
   else:
@@ -139,7 +140,7 @@ def challenge1(params):
 
                         "pretext": "Wrong Answer!",
 
-                        "title": "Wrong Answer! Your answer: " + user_answer,
+                        "title": "Wrong Answer! Your answer: " + user_answer + "original params:"+ testvalue,
 
                         "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
 
