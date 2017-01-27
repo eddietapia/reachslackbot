@@ -51,7 +51,7 @@ def challenge0(params):
         ]
 
 def challenge1(params):
- if params is None:
+  if params is None:
     return [
             {
               "fallback": "Task assigned after Challenge 1 is complete.",
@@ -70,8 +70,6 @@ def challenge1(params):
            #"\nPuzzle 1: " + "\nWhat is brown and sticky?" + \
             #"\nPlease tell the reachbot the answer to unlock the first challenge." + \
             #"\nEx: '@reachbot challenge 1 answer'"
-    return response
-  print type(params)
   user_answer = str(''.join(params))
   # Check if user inputted correct answer 
   if "941" == user_answer:
@@ -94,13 +92,13 @@ def challenge1(params):
                   "pretext": "Wrong Answer!",
                   "title": "Wrong Answer!",
                   "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
-                  "text": "This is supposed to be the easiest puzzle you know..."
+                  "text": "This is supposed to be the easiest puzzle you know...",
                   "footer": "REACh",
                   "footer_icon": CHALLENGE_IMAGE_URL
           }
         ]
 def challenge2(params):
- if params is None:
+  if params is None:
     return [
             {
               "fallback": "Task assigned after Challenge 2 is complete.",
@@ -164,18 +162,18 @@ def challenge3(params):
   user_answer = str(''.join(params))
   # Check if user inputted correct answer 
   if "5" == user_answer:
-        return [
-                {
-                  "fallback": "Task assigned for Challenge 3 is complete.",
-                  "color": "#3652a6",
-                  "pretext": "REACh 2017 Challenge 3 Task Completed",
-                  "title": "Link to Challenge 3",
-                  "title_link": CHALLENGE3_URL,
-                  "text": "This challenge is due at 10:00am",
-                  "footer": "REACh",
-                  "footer_icon": CHALLENGE_IMAGE_URL
-                }
-               ] 
+    return  [
+            {
+              "fallback": "Task assigned for Challenge 3 is complete.",
+              "color": "#3652a6",
+              "pretext": "REACh 2017 Challenge 3 Task Completed",
+              "title": "Link to Challenge 3",
+              "title_link": CHALLENGE3_URL,
+              "text": "This challenge is due at 10:00am",
+              "footer": "REACh",
+              "footer_icon": CHALLENGE_IMAGE_URL
+            }
+            ] 
   return [
           {
                   "fallback": "Oops!",
@@ -207,27 +205,27 @@ def challenge4(params):
   user_answer = str(''.join(params))
   # Check if user inputted correct answer 
   if "2016" == user_answer:
-        return [
-                {
-                  "fallback": "Task assigned for Challenge 4 is complete.",
-                  "color": "#3652a6",
-                  "pretext": "REACh 2017 Challenge 4 Task Completed",
-                  "title": "Link to Challenge 4",
-                  "title_link": CHALLENGE4_URL,
-                  "text": "This challenge is due at 6pm",
-                  "footer": "REACh",
-                  "footer_icon": CHALLENGE_IMAGE_URL
-                }
-               ] 
-  return [
+    return  [
+            {
+              "fallback": "Task assigned for Challenge 4 is complete.",
+              "color": "#3652a6",
+              "pretext": "REACh 2017 Challenge 4 Task Completed",
+              "title": "Link to Challenge 4",
+              "title_link": CHALLENGE4_URL,
+              "text": "This challenge is due at 6pm",
+              "footer": "REACh",
+              "footer_icon": CHALLENGE_IMAGE_URL
+            }
+            ] 
+  return  [
           {
-                  "fallback": "Oops!",
-                  "color": "#ff0000",
-                  "pretext": "Wrong Answer!",
-                  "title": "Wrong!!!",
-                  "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
-                  "text": "Close! But not close enough... Please try again",
-                  "footer": "REACh",
-                  "footer_icon": CHALLENGE_IMAGE_URL
+            "fallback": "Oops!",
+            "color": "#ff0000",
+            "pretext": "Wrong Answer!",
+            "title": "Wrong!!!",
+            "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
+            "text": "Close! But not close enough... Please try again",
+            "footer": "REACh",
+            "footer_icon": CHALLENGE_IMAGE_URL
           }
-        ]
+          ]

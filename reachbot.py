@@ -26,7 +26,7 @@ def handle_command(command, channel):
     are valid commands. If so, then acts on the commands. If not,
     returns back what it needs for clarification.
     """
-    response = "Hi! Welcome to REACh 2017!\n" + \
+    response = "Hi! Hola! Salut!  Welcome to REACh 2017!\n" + \
                "Please type '@reachbot help' for more info.\n" + \
                "Happy Hacking\n" + \
                "- Your friends at REACh"
