@@ -26,6 +26,7 @@ def challenge0(params):
     return response
   print type(params)
   user_answer = str(''.join(params))
+  # Check if correct answer
   if "stick" in user_answer.lower():
       return  [
 
