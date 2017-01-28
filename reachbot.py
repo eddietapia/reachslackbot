@@ -65,8 +65,7 @@ def handle_command(command, channel):
       else:
         array_response = challenge4(None)
     elif command.startswith(CHALLENGE5_COMMAND):
-      // What
-      array_response = challenge5(params[2:])
+      array_response = challenge5(None)
 
 
     if command.startswith(EXAMPLE_COMMAND):
