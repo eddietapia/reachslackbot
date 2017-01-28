@@ -393,8 +393,7 @@ def challenge5(params):
 
                         "title_link": PUZZLE_SECRET_1,
 
-                        "text": "Once you have completed the challenge, let\
-                        Eddie know by messaging him on slack. \n - Happy hacking",
+                        "text": "Let Eddie know when you are done \n- Happy hacking",
 
                         "footer": "REACh",
 
