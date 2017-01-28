@@ -7,11 +7,11 @@ teams at SHPE's REACh 2017 Engineering Competition
 """
 
 CHALLENGE_IMAGE_URL = "https://dl.dropboxusercontent.com/u/14766850/download%20%281%29.png"
-CHALLENGE1_URL = "https://drive.google.com/file/d/0B9U4IYtGjEsVaktPSm1FRU82Wkk/view"
-CHALLENGE2_URL = "https://drive.google.com/file/d/0B9U4IYtGjEsVdEtld2NDaGpCV0U/view"
-CHALLENGE3_URL = "https://drive.google.com/file/d/0B9U4IYtGjEsVeXZOSnBiV2tpbjA/view"
-CHALLENGE4_URL = "https://drive.google.com/file/d/0B9U4IYtGjEsVc3h5V2NwU19xOW8/view"
-PUZZLE_1_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVcU1pZEJsTGlMMzQ"
+CHALLENGE1_URL = "https://drive.google.com/file/d/0B01WlOybAVzdVmdaVjBNMnRMeDA/view"
+CHALLENGE2_URL = "https://drive.google.com/file/d/0B01WlOybAVzdaXV2X01wVmhpUU0/view"
+CHALLENGE3_URL = "https://drive.google.com/file/d/0B01WlOybAVzdRS1qNnVLYjRKT1k/view"
+CHALLENGE4_URL = "https://drive.google.com/file/d/0B01WlOybAVzdd2cyQ1ljU0VhTWs/view"
+PUZZLE_1_URL = "https://drive.google.com/file/d/0B9U4IYtGjEsVQzRXTzMxelZ6TlU/view"
 PUZZLE_2_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVOWtVUTZCNmdGQ3c"
 PUZZLE_3_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVY1lxTWlzeENVb00"
 PUZZLE_4_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVV2ZLcWdJd2UzSE0"
@@ -104,7 +104,7 @@ def challenge1(params):
 
   user_answer = str(params[0])  
   # Check if user inputted correct answer 
-  if len(params) == 1 and "941" == user_answer:
+  if len(params) == 1 and "64" == user_answer:
         return  [
 
                 {
