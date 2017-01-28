@@ -1,6 +1,6 @@
 import os
 import time
-from challenges import challenge0,challenge1,challenge2,challenge3,challenge4
+from challenges import challenge0,challenge1,challenge2,challenge3,challenge4,challenge5
 from slackclient import SlackClient
 
 
@@ -65,8 +65,7 @@ def handle_command(command, channel):
       else:
         array_response = challenge4(None)
     elif command.startswith(CHALLENGE5_COMMAND):
-      if(len(params) >= 1):
-        array_response = challenge5(params[2:])
+      array_response = challenge5(params[2:])
 
 
     if command.startswith(EXAMPLE_COMMAND):

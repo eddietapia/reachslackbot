@@ -377,7 +377,7 @@ def challenge4(params):
                 }
 
            ]  
-def secretchallenge(params):
+def challenge5(params):
   if params is None:
     return [
 
