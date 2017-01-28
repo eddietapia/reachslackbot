@@ -33,7 +33,6 @@ def handle_command(command, channel):
     array_response = [] 
     # Split user params into an array 
     params = command.split(' ')
-    
     if command.startswith(HELP_COMMAND):
       response = "This bot will be used to tell you the upcoming " + \
                   "challenges that each team has to complete.\nType '" + \
@@ -54,7 +53,6 @@ def handle_command(command, channel):
         array_response = challenge2(params[2:])
       else:
         array_response = challenge2(None)
- 
     elif command.startswith(CHALLENGE3_COMMAND):
       if (len(params) >= 3):
         array_response = challenge3(params[2:])
@@ -89,7 +87,7 @@ def parse_slack_output(slack_rtm_output):
         for output in output_list:
             if output and 'text' in output and AT_BOT in output['text']:
                 # return text after the @ mention, whitespace removed
-                return output['text'].split(AT_BOT)[1].strip().lower(), \
+                return output['text'].split(AT_BOT)[1].strip(), \
                        output['channel']
     return None, None
 

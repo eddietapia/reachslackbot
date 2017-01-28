@@ -179,6 +179,8 @@ def challenge2(params):
 
            ]
   user_answer = params[0]
+  print len(params)
+  print params[0]
   # Check if user inputted correct answer 
   if len(params) == 1 and "T" == user_answer:
         return  [
@@ -204,21 +206,27 @@ def challenge2(params):
                 }
 
            ]
-  return  
-  {
-            "attachments": [
-              {
-                      "fallback": "Oops!",
-                      "color": "#ff0000",
-                      "pretext": "Wrong Answer!",
-                      "title": "Wrong Answer! I could do this for days",
-                      "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
-                      "text": "Let me know if you need my help... I'm kind of a genius'",
-                      "footer": "REACh",
-                      "footer_icon": CHALLENGE_IMAGE_URL
-              }
-            ]
-          }
+  return  [
+
+                {
+
+                        "fallback": "Oops!",
+
+                        "color": "#ff0000",
+
+                        "pretext": "Wrong Answer!",
+
+                        "title": "Wrong Answer!",
+
+                        "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
+
+                        "footer": "REACh",
+
+                        "footer_icon": CHALLENGE_IMAGE_URL
+
+                }
+
+           ]  
 
 def challenge3(params):
   if params is None:
@@ -234,7 +242,7 @@ def challenge3(params):
 
                         "title": "Link to Puzzle 3",
 
-                        "title_link": PUZZLE3_URL,
+                        "title_link": PUZZLE_3_URL,
 
                         "text": "In order to unlock challenge 3, you need to solve a puzzle first..." + \
                         "\nPlease tell the reachbot the answer to unlock the third challenge." + \
@@ -273,7 +281,7 @@ def challenge3(params):
                 }
 
            ]
-    return [
+  return  [
 
                 {
 
@@ -283,7 +291,7 @@ def challenge3(params):
 
                         "pretext": "Wrong Answer!",
 
-                        "title": "Wrong Answer buddy! Nice try.",
+                        "title": "Wrong Answer!",
 
                         "title_link": "http://giphy.com/gifs/colbertlateshow-no-stephen-colbert-l2JhLaxhWba6OivE4",
 
@@ -293,8 +301,7 @@ def challenge3(params):
 
                 }
 
-           ]
-           
+           ]  
 def challenge4(params):
   if params is None:
      return [
@@ -309,7 +316,7 @@ def challenge4(params):
 
                         "title": "Link to Puzzle 4",
 
-                        "title_link": PUZZLE4_URL,
+                        "title_link": PUZZLE_4_URL,
 
                         "text": "In order to unlock challenge 4, you need to solve a puzzle first..." + \
                         "\nPlease tell the reachbot the answer to unlock the third challenge." + \
