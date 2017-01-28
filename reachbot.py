@@ -16,6 +16,7 @@ CHALLENGE1_COMMAND = "challenge 1"
 CHALLENGE2_COMMAND = "challenge 2"
 CHALLENGE3_COMMAND = "challenge 3"
 CHALLENGE4_COMMAND = "challenge 4"
+CHALLENGE5_COMMAND = "challenge 5"
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
@@ -63,6 +64,9 @@ def handle_command(command, channel):
         array_response = challenge4(params[2:])
       else:
         array_response = challenge4(None)
+    elif command.startswith(CHALLENGE5_COMMAND):
+      if(len(params) >= 3):
+        array_response = challenge5(params[2:])
 
 
     if command.startswith(EXAMPLE_COMMAND):

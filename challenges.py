@@ -15,6 +15,7 @@ PUZZLE_1_URL = "https://drive.google.com/file/d/0B9U4IYtGjEsVQzRXTzMxelZ6TlU/vie
 PUZZLE_2_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVOWtVUTZCNmdGQ3c"
 PUZZLE_3_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVY1lxTWlzeENVb00"
 PUZZLE_4_URL = "https://drive.google.com/open?id=0B9U4IYtGjEsVV2ZLcWdJd2UzSE0"
+PUZZLE_SECRET_1 = "https://docs.google.com/document/d/1brcNj2Ml0IwBxQUUSQUJ7JJAq6w1Znd2J5s0P19YVvY/edit?usp=sharing"
 CHALLENGE1_TEXT = "In order to unlock challenge 1, you need to solve a puzzle first...\nPlease tell the reachbot the answer to unlock the first challenge.\nEx: '@reachbot challenge 1 <answer>'"
 
 def challenge0(params):
@@ -376,3 +377,29 @@ def challenge4(params):
                 }
 
            ]  
+def secretchallenge(params):
+  if params is None:
+    return [
+
+                {
+
+                        "fallback": "Secret challenge",
+
+                        "color": "#3652a6",
+
+                        "pretext": "REACh 2017",
+
+                        "title": "Secret Coding Challenge",
+
+                        "title_link": PUZZLE_SECRET_1,
+
+                        "text": "Once you have completed the challenge, let + \
+                        Eddie know by messaging him on slack. \n - Happy hacking",
+
+                        "footer": "REACh",
+
+                        "footer_icon": CHALLENGE_IMAGE_URL
+
+                }
+
+           ]
